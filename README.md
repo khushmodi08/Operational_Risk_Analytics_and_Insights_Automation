@@ -158,9 +158,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
-## 👤 Author
-
-**Milad Nasiri**
-- LinkedIn: [Miladnasiri](https://linkedin.com/in/Miladnasiri)
-- GitHub: [@miladnasiri](https://github.com/miladnasiri)
 
