@@ -84,63 +84,6 @@ Each row in the dataset includes the following columns:
 - Scikit-learn
 - SQLAlchemy
 
-## 📋 Prerequisites
-
-```bash
-Python 3.11 or higher
-pip (Python package manager)
-```
-
-## 🔧 Installation
-
-1. Clone the repository
-```bash
-git clone https://github.com/miladnasiri/RM.git
-cd RM
-```
-
-2. Create and activate virtual environment
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
-
-3. Install dependencies
-```bash
-pip install -r requirements.txt
-```
-
-## 🚀 Usage
-
-1. Run the application
-```bash
-python main.py
-```
-
-2. Access the dashboard
-```
-http://localhost:8050
-```
-
-## 📁 Project Structure
-
-```
-risk_analytics/
-├── data/
-│   ├── data_loader.py        # Data ingestion and preprocessing
-│   └── __init__.py
-├── analysis/
-│   ├── risk_metrics.py       # Risk analysis and metrics calculation
-│   └── __init__.py
-├── visualization/
-│   ├── dashboards.py         # Dashboard and visualization components
-│   └── __init__.py
-├── utils/
-│   └── __init__.py
-├── requirements.txt          # Project dependencies
-├── main.py                   # Application entry point
-└── README.md                # Project documentation
-```
 
 ## 📊 Sample Visualizations
 
@@ -150,12 +93,6 @@ risk_analytics/
 ### Department Risk Comparison
 ![Department Comparison](https://github.com/miladnasiri/Risk-Analytics-Project-Showcasing-Data-Visualization-and-Insights/blob/875963c1085e4e4576c7eb2a8f2f78533bf95562/Department%20Risk%20Comparison.png)
 
-## 🤝 Contributing
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-## 📝 License
-
-[MIT](https://choosealicense.com/licenses/mit/)
 
 
