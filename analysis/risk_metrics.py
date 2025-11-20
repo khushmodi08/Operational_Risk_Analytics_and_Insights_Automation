@@ -63,16 +63,21 @@ class RiskAnalyzer: #Class
     def _perform_trend_analysis(self, df):
         """Analyze trends in risk scores"""
         monthly_trends = df.groupby([df['date'].dt.to_period('M'), 'department'])['risk_score'].mean().unstack()
+                                    #Converts date to month                                            #Converts rows into columns
         trend_coefficients = {}
         for col in monthly_trends.columns:
             slope, _, _, _, _ = stats.linregress(range(len(monthly_trends)), monthly_trends[col])
+            #For each department fits a linear regression line and extracts slope
             trend_coefficients[col] = slope
+            # Stores slope values
         return trend_coefficients
     
     def _analyze_risk_correlations(self, df):
         """Analyze correlations between risk metrics"""
         correlation_matrix = df[['risk_score', 'compliance_score', 'incident_count', 
-                               'mitigation_cost', 'control_effectiveness']].corr()
+            
+                                'mitigation_cost', 'control_effectiveness']].corr()
+                                                                            #Computes Corelation matrix
         return correlation_matrix.to_dict()
     
     def identify_risk_clusters(self, df):
@@ -88,6 +93,7 @@ class RiskAnalyzer: #Class
         # Perform clustering
         kmeans = KMeans(n_clusters=4, random_state=42, n_init=10)
         df['risk_cluster'] = kmeans.fit_predict(X)
+        #Add PCA components to DataFrame
         df['pca_1'] = X_pca[:, 0]
         df['pca_2'] = X_pca[:, 1]
         
