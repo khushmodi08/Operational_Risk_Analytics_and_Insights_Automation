@@ -6,8 +6,8 @@ from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
 from scipy import stats
 
-class RiskAnalyzer:
-    def __init__(self):
+class RiskAnalyzer: #Class
+    def __init__(self): #Object
         self.scaler = StandardScaler()
         
     def calculate_risk_metrics(self, df):
